@@ -11,7 +11,7 @@
 body {
   background-color: var(--vscode-bg);
   color: var(--vscode-text);
-  font-family: 'Consolas', 'Source Code Pro', monospace;
+  font-family: "Consolas", "Source Code Pro", monospace;
   line-height: 1.6;
   padding-top: 20px;
   margin-bottom: 30px;
@@ -37,7 +37,7 @@ body {
 
 .post-item:hover {
   transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* 侧边栏样式 */
@@ -52,7 +52,7 @@ body {
   background-color: var(--vscode-sidebar);
   border-bottom: 1px solid var(--vscode-active);
   margin-bottom: 2rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 0.5rem 1rem;
 }
 
@@ -84,7 +84,12 @@ pre {
 }
 
 /* 标题样式 */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #fff;
   font-weight: 600;
   margin-bottom: 0.7rem; /* 减小底部边距 */
@@ -551,18 +556,22 @@ h1, h2, h3, h4, h5, h6 {
     padding: 10px;
     overflow-x: hidden;
   }
-  
+
   .post-content {
     padding: 1rem;
     overflow-x: hidden;
   }
-  
+
   /* 确保所有内容都不会溢出容器 */
-  img, video, iframe, embed, object {
+  img,
+  video,
+  iframe,
+  embed,
+  object {
     max-width: 100%;
     height: auto;
   }
-  
+
   /* 优化表格在移动端的显示 */
   table {
     display: block;
@@ -570,26 +579,29 @@ h1, h2, h3, h4, h5, h6 {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
-  
+
   /* 优化移动端文章标题 */
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     word-break: break-word;
   }
-  
+
   /* 页脚在移动端的样式 */
   .footer {
     position: relative;
     margin-top: 2rem;
   }
-  
+
   .status-bar {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
     padding: 8px 5px;
   }
-  
-  .status-item, .status-item.github {
+
+  .status-item,
+  .status-item.github {
     margin: 0;
     font-size: 11px;
     text-align: center;
@@ -597,19 +609,20 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: center;
   }
-  
+
   /* 确保所有页脚项目样式一致 */
-  .status-item i, .status-item.github i {
+  .status-item i,
+  .status-item.github i {
     font-size: 12px;
     margin-right: 4px;
   }
-  
+
   /* 移动端内容区域底部留出空间 */
   .wrapper {
     padding-bottom: 0;
     margin-bottom: 0;
   }
-  
+
   /* 确保内容不会被页脚遮挡 */
   body {
     margin-bottom: 0;
@@ -621,8 +634,9 @@ h1, h2, h3, h4, h5, h6 {
   .status-bar {
     padding: 5px;
   }
-  
-  .status-item, .status-item.github {
+
+  .status-item,
+  .status-item.github {
     font-size: 10px;
   }
 }
