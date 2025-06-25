@@ -1,0 +1,44 @@
+/* light-mode.css */
+body.light-mode {
+  background-color: #fff4e4;
+  color: #222;
+}
+
+body.light-mode a {
+  color: #007bff;
+}
+
+body.light-mode header,
+body.light-mode footer {
+  background-color: #fff4e4;
+  border-color: #fff4e4;
+}
+
+body.light-mode .editor-content {
+  flex: 1;
+  background: #fff4e4;
+}
+
+body.light-mode .tab-bar {
+  height: 35px;
+  background: #fff4e4;
+  border-bottom: 1px solid var(--vscode-border);
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+}
+
+body.light-mode .sidebar-explorer {
+  width: 250px;
+  background: #fff4e4;
+  border-right: 1px solid var(--vscode-border);
+  padding: 10px 0;
+  position: sticky; /* 添加固定定位 */
+  top: 48px; /* 头部导航栏高度 */
+  height: calc(100vh - 48px); /* 减去头部导航栏高度 */
+  overflow-y: auto; /* 允许内容滚动 */
+  scrollbar-width: thin; /* Firefox 细滚动条 */
+  scrollbar-color: var(--vscode-border) transparent; /* Firefox 滚动条颜色 */
+}
+
+/* 其他根据暗色风格反转的样式 */

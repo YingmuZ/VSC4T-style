@@ -10,8 +10,16 @@
   cursor: pointer;
 }
 
-.post-title a {
+/* .post-title a {
   color: aqua !important;
+} */
+
+.vs-header {
+  margin-bottom: 10px !important;
+}
+
+.post-card:hover {
+  border-left-color: #dcb67a;
 }
 
 @media screen and (max-width: 768px) {
