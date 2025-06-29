@@ -22,7 +22,6 @@ body.light-mode .editor-content {
 body.light-mode .tab-bar {
   height: 35px;
   background: #fff4e4;
-  border-bottom: 1px solid var(--vscode-border);
   display: flex;
   align-items: center;
   padding: 0 8px;
@@ -31,14 +30,49 @@ body.light-mode .tab-bar {
 body.light-mode .sidebar-explorer {
   width: 250px;
   background: #fff4e4;
-  border-right: 1px solid var(--vscode-border);
+  /* border-right: 1px solid var(--vscode-border); */
   padding: 10px 0;
   position: sticky; /* 添加固定定位 */
   top: 48px; /* 头部导航栏高度 */
   height: calc(100vh - 48px); /* 减去头部导航栏高度 */
   overflow-y: auto; /* 允许内容滚动 */
   scrollbar-width: thin; /* Firefox 细滚动条 */
-  scrollbar-color: var(--vscode-border) transparent; /* Firefox 滚动条颜色 */
+  scrollbar-color: lightyellow transparent; /* Firefox 滚动条颜色 */
+}
+
+body.light-mode .read-more {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: lightyellow;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
 }
 
 /* 其他根据暗色风格反转的样式 */
+
+@media screen and (max-width: 768px) {
+  body.light-mode .sidebar-explorer {
+    /* 在移动端亮色模式下，明确将定位改回 fixed，并隐藏 */
+    position: fixed; /* 覆盖 light-mode.css 中 sticky 的规则 */
+    left: -100%; /* 确保它默认是隐藏的 */
+    /* 保持 light-mode.css 中为侧边栏定义的亮色背景 */
+    background: #fff4e4;
+    border-right: 1px solid lightyellow;
+    /* 确保高度和滚动条样式与 mobile.css 一致，或者让 mobile.css 覆盖 */
+    height: calc(100vh - 48px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  body.light-mode .sidebar-explorer.show {
+    left: 0;
+    box-shadow: 2px 0 8px lightyellow !important;
+  }
+
+  /* 确保 mobile-menu-toggle 在亮色模式下也能有适当的背景色 */
+  body.light-mode .mobile-menu-toggle {
+    background: lightyellow; /* 或其他适合亮色模式的背景色 */
+    color: #333; /* 亮色模式下的图标颜色 */
+  }
+}

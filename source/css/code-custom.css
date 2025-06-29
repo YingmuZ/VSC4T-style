@@ -12,25 +12,24 @@ code-custom.css：负责
   margin-bottom: 2em;
   width: 100%;
   position: relative;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
   border-radius: 6px;
   overflow: hidden;
   height: auto !important;
 }
 
-
 /* 代码块复制按钮样式优化 */
 /* 隐藏复制按钮文本，只显示图标 */
-.copy-btn::before, 
+.copy-btn::before,
 .copy-button::before {
   content: "";
   display: none !important;
 }
 
 /* 复制按钮统一样式 */
-.copy-btn, 
+.copy-btn,
 .copy-button {
-  width:  26px;
+  width: 26px;
   height: 26px;
   padding: 0;
   display: flex;
@@ -47,7 +46,7 @@ code-custom.css：负责
   right: 4px;
   opacity: 0;
   z-index: 5;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 /* 代码块容器悬停时显示复制按钮 */
@@ -86,7 +85,7 @@ pre:hover .copy-button,
 
 /* 特殊字体覆盖 */
 .code-language {
-  font-family: 'JetBrains Mono', monospace, 'Segoe UI', sans-serif;
+  font-family: "JetBrains Mono", monospace, "Segoe UI", sans-serif;
   font-size: 12px;
 }
 
@@ -98,11 +97,11 @@ pre:not(.line-numbers-pre):not(.code-content) {
   margin: 2em 0;
   border-radius: 6px;
   overflow-x: auto;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 14px;
   line-height: 1.6;
   position: relative;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
   width: 100%;
   box-sizing: border-box;
   display: block;
@@ -125,7 +124,7 @@ pre:not(.line-numbers-pre):not(.code-content):not(.mermaid.enhanced)::before {
   padding: 2px 8px;
   font-size: 12px;
   border-bottom-left-radius: 6px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-weight: 500;
 }
 
@@ -139,24 +138,24 @@ pre.mermaid.enhanced::before {
   color: #a0a0a0;
   padding: 4px 10px;
   font-size: 12px;
-  font-family: 'JetBrains Mono', 'Segoe UI', sans-serif;
+  font-family: "JetBrains Mono", "Segoe UI", sans-serif;
   font-weight: 600;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   border-bottom-left-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
 }
 
 pre.mermaid.enhanced:hover::before {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   background: linear-gradient(135deg, #3a3a3a, #2c2c2c);
   color: #b8b8b8;
 }
 
 /* 滚动指示效果 */
-.scrollable::after {
+/* .scrollable::after {
   content: "";
   position: absolute;
   top: 0;
@@ -168,7 +167,7 @@ pre.mermaid.enhanced:hover::before {
   opacity: 0.8;
 }
 
-/* 滚动时的指示效果 */
+
 .scrolled::before {
   content: "";
   position: absolute;
@@ -179,7 +178,7 @@ pre.mermaid.enhanced:hover::before {
   background: linear-gradient(270deg, rgba(30,30,30,0) 0%, rgba(30,30,30,1) 100%);
   pointer-events: none;
   opacity: 0.8;
-}
+} */
 
 /* 确保代码块中的内容正确显示 */
 .code-pre-wrapper {
@@ -247,7 +246,7 @@ pre.mermaid.enhanced:hover::before {
   .line-numbers-pre {
     padding: 4px 6px; /* 与非移动版保持一致 */
   }
-  
+
   .code-content {
     padding: 4px 8px !important; /* 与非移动版保持一致 */
   }
@@ -284,4 +283,3 @@ pre:not(.line-numbers-pre):not(.code-content) .copy-button {
 pre:not(.line-numbers-pre):not(.code-content):hover .copy-button {
   opacity: 1;
 }
-

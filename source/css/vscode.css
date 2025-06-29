@@ -9,7 +9,7 @@
 .vscode-container {
   display: flex;
   min-height: 100vh;
-  background: var(--vscode-bg);
+  /* background: var(--vscode-bg); */
   color: var(--vscode-text);
 }
 
@@ -70,7 +70,9 @@
   padding: 5px 12px;
 }
 
-.folder, .file, .tag-item {
+.folder,
+.file,
+.tag-item {
   padding: 3px 8px;
   display: flex;
   align-items: center;
@@ -79,7 +81,9 @@
   cursor: pointer;
 }
 
-.folder:hover, .file:hover, .tag-item:hover {
+.folder:hover,
+.file:hover,
+.tag-item:hover {
   background: var(--vscode-active);
 }
 
@@ -118,14 +122,14 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  background: var(--vscode-bg);
+  /* background: var(--vscode-bg); */
   border-right: 1px solid var(--vscode-border);
   font-size: 13px;
   color: var(--vscode-text);
 }
 
 .tab.active {
-  background: var(--vscode-bg);
+  /* background: var(--vscode-bg); */
   border-top: 1px solid var(--vscode-accent);
 }
 
@@ -136,7 +140,7 @@
 .content-area {
   padding: 20px;
   overflow-y: auto;
-  max-width: 100%;      /* 确保内容区域不会溢出 */
+  max-width: 100%; /* 确保内容区域不会溢出 */
 }
 
 /* 文章卡片样式 */
@@ -247,7 +251,8 @@
   background: var(--vscode-active);
 }
 
-.page-number, .extend {
+.page-number,
+.extend {
   padding: 4px 8px;
   background: var(--vscode-active);
   border-radius: 3px;
@@ -256,7 +261,8 @@
   font-size: 13px;
 }
 
-.page-number:hover, .extend:hover {
+.page-number:hover,
+.extend:hover {
   background: var(--vscode-highlight);
 }
 
@@ -391,7 +397,9 @@ pre:not(:has(code)) .copy-button {
 }
 
 /* 移除所有可能的轮廓 */
-pre, pre code, .copy-button {
+pre,
+pre code,
+.copy-button {
   outline: none !important;
   box-shadow: none !important;
 }
@@ -402,7 +410,7 @@ pre, pre code, .copy-button {
   max-width: 100%;
   tab-size: 4;
   -moz-tab-size: 4;
-  white-space: pre-wrap;  /* 允许代码自动换行 */
+  white-space: pre-wrap; /* 允许代码自动换行 */
   word-break: break-word; /* 允许在单词内换行 */
   word-wrap: break-word;
   overflow-x: auto;
@@ -421,7 +429,7 @@ pre, pre code, .copy-button {
     width: 100%;
     box-sizing: border-box;
   }
-  
+
   .hljs {
     padding: 0.3em;
     font-size: 13px;
@@ -437,23 +445,24 @@ pre, pre code, .copy-button {
     height: 24px;
     font-size: 12px;
   }
-  
+
   /* 优化移动端滚动体验 */
-  pre, .hljs {
+  pre,
+  .hljs {
     -webkit-overflow-scrolling: touch;
     scrollbar-width: thin;
   }
-  
+
   /* 自定义滚动条样式 */
   pre::-webkit-scrollbar {
     height: 4px;
   }
-  
+
   pre::-webkit-scrollbar-thumb {
     background: var(--vscode-border);
     border-radius: 2px;
   }
-  
+
   /* 确保链接不会溢出容器 */
   a {
     word-break: break-word;
@@ -461,25 +470,25 @@ pre, pre code, .copy-button {
     max-width: 100%;
     display: inline-block;
   }
-  
+
   /* 优化页脚样式 */
   .footer {
     position: relative;
     height: auto;
   }
-  
+
   .status-bar {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 8px 5px;
   }
-  
+
   .status-item {
     margin: 5px;
     text-align: center;
   }
-  
+
   .status-item.github {
     margin-left: 5px;
   }
@@ -488,14 +497,14 @@ pre, pre code, .copy-button {
 /* 小屏幕设备的额外优化 */
 @media screen and (max-width: 480px) {
   .hljs {
-    font-size: 12px;    /* 更小屏幕上进一步减小字体 */
-    line-height: 1.4;   /* 减小行高 */
+    font-size: 12px; /* 更小屏幕上进一步减小字体 */
+    line-height: 1.4; /* 减小行高 */
   }
-  
+
   pre {
     padding: 1em 0.5em; /* Adjusted padding */
   }
-  
+
   /* 优化小屏幕上的代码显示 */
   code {
     font-size: 12px;
@@ -505,8 +514,8 @@ pre, pre code, .copy-button {
 /* 横屏模式优化 */
 @media screen and (max-height: 480px) and (orientation: landscape) {
   pre {
-    max-height: 80vh;   /* 限制最大高度 */
-    overflow-y: auto;   /* 允许垂直滚动 */
+    max-height: 80vh; /* 限制最大高度 */
+    overflow-y: auto; /* 允许垂直滚动 */
   }
 }
 
@@ -525,10 +534,10 @@ pre, pre code, .copy-button {
 
 .post-content .post-header h1 {
   margin: 0 0 4px 0; /* 减小底部边距 */
-  font-size: 18px;   /* 减小字体大小 */
+  font-size: 18px; /* 减小字体大小 */
   font-weight: 600;
   color: var(--vscode-text);
-  line-height: 1.2;  /* 更紧凑的行高 */
+  line-height: 1.2; /* 更紧凑的行高 */
 }
 
 .post-content .post-meta {
@@ -680,7 +689,8 @@ pre, pre code, .copy-button {
   background: var(--vscode-active);
 }
 
-.page-number, .extend {
+.page-number,
+.extend {
   padding: 4px 8px;
   background: var(--vscode-active);
   border-radius: 3px;
@@ -689,7 +699,8 @@ pre, pre code, .copy-button {
   font-size: 13px;
 }
 
-.page-number:hover, .extend:hover {
+.page-number:hover,
+.extend:hover {
   background: var(--vscode-highlight);
 }
 
@@ -824,7 +835,9 @@ pre:not(:has(code)) .copy-button {
 }
 
 /* 移除所有可能的轮廓 */
-pre, pre code, .copy-button {
+pre,
+pre code,
+.copy-button {
   outline: none !important;
   box-shadow: none !important;
 }
@@ -835,7 +848,7 @@ pre, pre code, .copy-button {
   max-width: 100%;
   tab-size: 4;
   -moz-tab-size: 4;
-  white-space: pre-wrap;  /* 允许代码自动换行 */
+  white-space: pre-wrap; /* 允许代码自动换行 */
   word-break: break-word; /* 允许在单词内换行 */
   word-wrap: break-word;
   overflow-x: auto;
@@ -854,7 +867,7 @@ pre, pre code, .copy-button {
     width: 100%;
     box-sizing: border-box;
   }
-  
+
   .hljs {
     padding: 0.3em;
     font-size: 13px;
@@ -870,23 +883,24 @@ pre, pre code, .copy-button {
     height: 24px;
     font-size: 12px;
   }
-  
+
   /* 优化移动端滚动体验 */
-  pre, .hljs {
+  pre,
+  .hljs {
     -webkit-overflow-scrolling: touch;
     scrollbar-width: thin;
   }
-  
+
   /* 自定义滚动条样式 */
   pre::-webkit-scrollbar {
     height: 4px;
   }
-  
+
   pre::-webkit-scrollbar-thumb {
     background: var(--vscode-border);
     border-radius: 2px;
   }
-  
+
   /* 确保链接不会溢出容器 */
   a {
     word-break: break-word;
@@ -894,25 +908,25 @@ pre, pre code, .copy-button {
     max-width: 100%;
     display: inline-block;
   }
-  
+
   /* 优化页脚样式 */
   .footer {
     position: relative;
     height: auto;
   }
-  
+
   .status-bar {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 8px 5px;
   }
-  
+
   .status-item {
     margin: 5px;
     text-align: center;
   }
-  
+
   .status-item.github {
     margin-left: 5px;
   }
@@ -921,14 +935,14 @@ pre, pre code, .copy-button {
 /* 小屏幕设备的额外优化 */
 @media screen and (max-width: 480px) {
   .hljs {
-    font-size: 12px;    /* 更小屏幕上进一步减小字体 */
-    line-height: 1.4;   /* 减小行高 */
+    font-size: 12px; /* 更小屏幕上进一步减小字体 */
+    line-height: 1.4; /* 减小行高 */
   }
-  
+
   pre {
     padding: 1em 0.5em; /* Adjusted padding */
   }
-  
+
   /* 优化小屏幕上的代码显示 */
   code {
     font-size: 12px;
@@ -938,7 +952,7 @@ pre, pre code, .copy-button {
 /* 横屏模式优化 */
 @media screen and (max-height: 480px) and (orientation: landscape) {
   pre {
-    max-height: 80vh;   /* 限制最大高度 */
-    overflow-y: auto;   /* 允许垂直滚动 */
+    max-height: 80vh; /* 限制最大高度 */
+    overflow-y: auto; /* 允许垂直滚动 */
   }
 }

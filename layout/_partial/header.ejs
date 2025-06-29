@@ -5,34 +5,53 @@
         <i class="fas fa-terminal"></i>
         <%= config.title %>
       </a>
-      <button id="toggle-theme" class="btn btn-sm">🌓 切换主题</button>
+      <!-- <button id="toggle-theme" class="btn btn-sm">🌓</button> -->
     </div>
-    
+
     <div class="nav-right">
-      <a href="<%- config.root %>" class="nav-item <%= is_home() ? 'active' : '' %>">
+      <a
+        href="<%- config.root %>"
+        class="nav-item <%= is_home() ? 'active' : '' %>"
+      >
         <i class="fas fa-home"></i>
         <span><%- __('home') %></span>
       </a>
-      <a href="<%- config.root + 'archives/' %>" class="nav-item <%= is_archive() ? 'active' : '' %>">
+      <a
+        href="<%- config.root + 'archives/' %>"
+        class="nav-item <%= is_archive() ? 'active' : '' %>"
+      >
         <i class="fas fa-archive"></i>
         <span><%- __('archives') %></span>
       </a>
-      <a href="<%- config.root + 'categories/' %>" class="nav-item <%= is_category() ? 'active' : '' %>">
+      <a
+        href="<%- config.root + 'categories/' %>"
+        class="nav-item <%= is_category() ? 'active' : '' %>"
+      >
         <i class="fas fa-folder"></i>
         <span><%- __('categories') %></span>
       </a>
-      <a href="<%- config.root + 'tags/' %>" class="nav-item <%= is_tag() ? 'active' : '' %>">
+      <a
+        href="<%- config.root + 'tags/' %>"
+        class="nav-item <%= is_tag() ? 'active' : '' %>"
+      >
         <i class="fas fa-tags"></i>
         <span><%- __('tags') %></span>
       </a>
-      <a href="<%- config.root + 'search/' %>" class="nav-item <%= is_current('search') ? 'active' : '' %>">
+      <a
+        href="<%- config.root + 'search/' %>"
+        class="nav-item <%= is_current('search') ? 'active' : '' %>"
+      >
         <i class="fas fa-search"></i>
         <span><%- __('search') %></span>
       </a>
-      <a href="<%- config.root + 'about/' %>" class="nav-item <%= is_current('about') ? 'active' : '' %>">
+      <a
+        href="<%- config.root + 'about/' %>"
+        class="nav-item <%= is_current('about') ? 'active' : '' %>"
+      >
         <i class="fas fa-info-circle"></i>
         <span><%- __('about') %></span>
       </a>
+      <button id="toggle-theme" class="btn btn-sm">🌓</button>
     </div>
   </nav>
 </header>
@@ -40,47 +59,50 @@
 <script>
   function smoothScroll(event, target) {
     event.preventDefault();
-    const targetId = target.substring(target.indexOf('#') + 1);
+    const targetId = target.substring(target.indexOf("#") + 1);
     const targetElement = document.getElementById(targetId);
 
     if (targetElement) {
       window.scrollTo({
         top: targetElement.offsetTop - 50, // 调整偏移量
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     } else {
       window.location.href = target;
     }
   }
 
-  window.addEventListener('scroll', function() {
-    const header = document.querySelector('.vs-header');
-    const nav = document.querySelector('.vs-nav');
-    const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-    
-    nav.style.setProperty('--scroll-percent', `${scrollPercent}%`);
-    
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector(".vs-header");
+    const nav = document.querySelector(".vs-nav");
+    const scrollPercent =
+      (window.scrollY /
+        (document.documentElement.scrollHeight - window.innerHeight)) *
+      100;
+
+    nav.style.setProperty("--scroll-percent", `${scrollPercent}%`);
+
     if (window.scrollY > 0) {
-      header.classList.add('scrolled');
+      header.classList.add("scrolled");
     } else {
-      header.classList.remove('scrolled');
+      header.classList.remove("scrolled");
     }
   });
 
   // 添加标签页切换动画
-  document.querySelectorAll('.nav-item').forEach(item => {
-    item.addEventListener('click', function(e) {
-      const ripple = document.createElement('span');
-      ripple.classList.add('nav-ripple');
+  document.querySelectorAll(".nav-item").forEach((item) => {
+    item.addEventListener("click", function (e) {
+      const ripple = document.createElement("span");
+      ripple.classList.add("nav-ripple");
       this.appendChild(ripple);
-      
+
       const rect = this.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
-      
+
       ripple.style.left = `${x}px`;
       ripple.style.top = `${y}px`;
-      
+
       setTimeout(() => ripple.remove(), 1000);
     });
   });
