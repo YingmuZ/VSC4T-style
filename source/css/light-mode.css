@@ -49,6 +49,28 @@ body.light-mode .read-more {
   transition: background-color 0.2s ease;
 }
 
+body.light-mode .post-content {
+  background-color: #fff4e4;
+  border-radius: 4px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+body.light-mode h3,
+body.light-mode h2,
+body.light-mode h1,
+body.light-mode p,
+body.light-mode .post-header h1 {
+  color: #333;
+}
+
+body.light-mode .post-header {
+  background: #fff4e4;
+  border-left: 3px solid lightgoldenrodyellow;
+  border-radius: 0 3px 3px 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
 /* 其他根据暗色风格反转的样式 */
 
 @media screen and (max-width: 768px) {
